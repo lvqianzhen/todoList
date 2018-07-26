@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    .box {
+      width: 200px;
+      height: 100px;
+      margin: 100px auto;
+      background: red;
+      position: relative;
+      text-align: center;
+    }
+    body{
+      position: relative;
+    }
+    .box::before{
+      content: "头部";
+      color: #fff;
+      line-height: 100px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .box2 {
+      width: 50px;
+      height: 50px;
+      margin: 50px auto;
+      background:#fff;
+      border-radius: 50%;
+      box-shadow:0 0 0 25px #f00,0 0 0 50px #ff0,0 0 0 100px #00f;
+    }
+  </style>
+</head>
+<body>
+<div class="box"></div>
+<div class="box2"></div>
+</body>
+</html>

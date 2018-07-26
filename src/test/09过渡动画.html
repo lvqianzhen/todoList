@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    .box{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      border: 1px solid #000;
+      background: #f00;
+      /*transition: left linear 2s;*/
+      transition-property: left;
+      transition-delay: 2s;
+      transition-duration: 5s;
+      transition-timing-function: linear;
+    }
+    body{
+      min-height: 100vh;
+    }
+    body:hover .box{
+      left: 300px;
+    }
+  </style>
+</head>
+<body>
+<div class="box"></div>
+<button id="btn" style="margin-top: 300px">动起来</button>
+<script>
+  var btn = document.querySelector("#btn");
+  var box = document.querySelector(".box");
+  btn.onclick = function () {
+    box.style.left = "500px";
+  }
+</script>
+</body>
+</html>

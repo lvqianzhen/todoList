@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      border: 1px solid #000;
+    }
+    .box::before {
+      content:"我是选择器的内容";
+      color: #f00;
+
+    }
+    .container{
+      width: 800px;
+      border: 1px solid #000;
+      margin: 50px auto;
+    }
+    .section>.article{
+      opacity: .5;
+      float: left;
+      width: 500px;
+      height: 200px;
+      background: pink;
+    }
+    .section>.aside{
+      opacity: .5;
+      float: left;
+      width: 300px;
+      height: 200px;
+      background: skyblue;
+    }
+    .footer{
+      background: red;
+      height: 200px;
+    }
+    .clearfix::after {
+      content:"";
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+<!--<div class="box">-->
+  <!--<p>我是div里的内容</p>-->
+<!--</div>-->
+<div class="container">
+  <div class="section clearfix">
+    <div class="article">文章</div>
+    <div class="aside">侧边栏</div>
+  </div>
+  <div class="footer">页脚</div>
+
+</div>
+</body>
+</html>
